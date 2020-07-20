@@ -1,14 +1,23 @@
 package com.coding.urbandictionary.ui.main
 
+import android.annotation.SuppressLint
+import android.app.SearchManager
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuInflater
 import androidx.fragment.app.Fragment
 import android.view.View
+import androidx.appcompat.widget.SearchView
+import androidx.core.content.ContextCompat.getSystemService
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.coding.urbandictionary.MainActivity
 import com.coding.urbandictionary.R
 import com.coding.urbandictionary.adapters.DictionaryAdapter
+import com.coding.urbandictionary.util.CompanionClass
 import com.coding.urbandictionary.util.Resource
 import kotlinx.android.synthetic.main.main_fragment.*
 

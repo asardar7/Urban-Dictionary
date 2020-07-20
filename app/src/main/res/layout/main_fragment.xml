@@ -11,7 +11,7 @@
         android:id="@+id/recyclerview_dict"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -25,6 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Sort by"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/tv_sort_likes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.043"
@@ -35,38 +36,36 @@
     <Button
         android:id="@+id/tv_sort_likes"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/transparent_bordered_btn_bg"
         android:text="Likes"
-        app:layout_constraintEnd_toStartOf="@+id/tv_sort_dislikes"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/recyclerview_dict"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/tv_sort_dislikes"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="192dp"
-        android:layout_marginBottom="9dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/transparent_bordered_btn_bg"
         android:text="Dislikes"
         app:layout_constraintBottom_toTopOf="@+id/recyclerview_dict"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_sort_by"
-        app:layout_constraintVertical_bias="0.55" />
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toEndOf="@+id/tv_sort_likes" />
 
     <Button
         android:id="@+id/tv_sort_clear"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginBottom="9dp"
+        android:background="@drawable/transparent_bordered_btn_bg"
         android:text="Clear"
         app:layout_constraintBottom_toTopOf="@+id/recyclerview_dict"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.23"
-        app:layout_constraintStart_toEndOf="@+id/tv_sort_dislikes"
-        app:layout_constraintTop_toBottomOf="@+id/tv_sort_by"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintHorizontal_bias="0.269"
+        app:layout_constraintStart_toEndOf="@+id/tv_sort_dislikes" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

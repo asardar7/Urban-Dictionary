@@ -10,22 +10,20 @@
         android:id="@+id/lbl_word"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:text="@string/word_searched"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/tv_word"
-        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.034" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_word"
         android:layout_width="138dp"
         android:layout_height="19dp"
+        android:layout_marginStart="44dp"
         android:layout_marginTop="8dp"
         android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lbl_word"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -35,8 +33,6 @@
         android:layout_marginStart="8dp"
         android:text="Description"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/tv_definition"
-        app:layout_constraintHorizontal_bias="0.216"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tv_definition"
         app:layout_constraintVertical_bias="0.0" />
@@ -45,17 +41,16 @@
         android:id="@+id/tv_definition"
         android:layout_width="247dp"
         android:layout_height="100dp"
+        android:layout_marginStart="28dp"
         android:text="TextView"
-        app:autoSizeTextType="uniform"
         app:autoSizeMaxTextSize="20sp"
         app:autoSizeMinTextSize="16sp"
         app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lbl_definition"
         app:layout_constraintTop_toBottomOf="@+id/tv_word"
-        app:layout_constraintVertical_bias="0.507" />
+        app:layout_constraintVertical_bias="0.348" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -73,9 +68,9 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginTop="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.807"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tv_definition"
+        app:layout_constraintHorizontal_bias="0.852"
+        app:layout_constraintStart_toStartOf="@+id/tv_definition"
         app:layout_constraintTop_toBottomOf="@+id/tv_definition"
         app:srcCompat="@drawable/ic_baseline_thumb_down_24" />
 
@@ -95,12 +90,11 @@
         android:id="@+id/tv_thumb_down"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="64dp"
         android:text="324"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.72"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tv_definition"
         app:layout_constraintTop_toBottomOf="@+id/tv_definition"
-        app:layout_constraintVertical_bias="0.852" />
+        app:layout_constraintVertical_bias="0.777" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
