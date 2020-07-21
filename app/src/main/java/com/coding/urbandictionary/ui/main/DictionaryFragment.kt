@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.View
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.coding.urbandictionary.R
@@ -39,6 +40,7 @@ class DictionaryFragment : Fragment(R.layout.main_fragment) {
                 is Resource.Error -> {
                     hideProgressBar()
                     response.message?.let { message ->
+                        Toast.makeText(activity, "An error occured: $message", Toast.LENGTH_LONG).show()
                         Log.e(CompanionClass.TAG, "An error occured: $message")
                     }
                 }

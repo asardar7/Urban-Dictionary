@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.main_activity)
 
         val repository = DictionaryRepository(DictionaryDatabase(this))
-        val viewModelProviderFactory = DictionaryViewModelFactory(repository)
+        val viewModelProviderFactory = DictionaryViewModelFactory(application, repository)
         viewModel = ViewModelProvider(this, viewModelProviderFactory).get(DictionaryViewModel::class.java)
 
         if (savedInstanceState == null) {
