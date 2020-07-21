@@ -41,13 +41,4 @@ class DictionaryDatabaseTest {
         val userFromDb = db.getDictionaryDao().getAllWordsListTest().get(0)
         assertEquals(userFromDb?.word, word.word)
     }
-
-
-//    @Test
-//    fun signInTest() {
-//        val word = db.getDictionaryDao().getAllWordsListTest()// .findUsersByName("george")
-//        assertThat(word.size, equalTo(1))
-//    }
-
-
 }
