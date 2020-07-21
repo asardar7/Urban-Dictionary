@@ -5,7 +5,9 @@ import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities.*
 import android.widget.ProgressBar
-import androidx.lifecycle.*
+import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.viewModelScope
 import com.coding.urbandictionary.model.DictionaryList
 import com.coding.urbandictionary.model.Word
 import com.coding.urbandictionary.repository.DictionaryRepository
@@ -14,7 +16,6 @@ import com.coding.urbandictionary.util.Resource
 import kotlinx.coroutines.launch
 import retrofit2.Response
 import java.io.IOException
-import java.util.*
 
 class DictionaryViewModel(
     app: Application,
@@ -32,7 +33,6 @@ class DictionaryViewModel(
     }
 
     fun getWord(searchWord: String) = viewModelScope.launch {
-//        word.postValue(Resource.Loading())
         safeDictionaryCall(searchWord)
     }
 
