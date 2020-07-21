@@ -1,4 +1,4 @@
-package com.coding.urbandictionary
+package com.coding.urbandictionary.ui.main
 
 import android.annotation.SuppressLint
 import android.app.SearchManager
@@ -6,17 +6,12 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import androidx.appcompat.widget.SearchView
 import androidx.lifecycle.ViewModelProvider
-import androidx.media.session.MediaButtonReceiver.handleIntent
+import com.coding.urbandictionary.R
 import com.coding.urbandictionary.db.DictionaryDatabase
 import com.coding.urbandictionary.repository.DictionaryRepository
-import com.coding.urbandictionary.ui.main.DictionaryFragment
-import com.coding.urbandictionary.ui.main.DictionaryViewModel
-import com.coding.urbandictionary.ui.main.DictionaryViewModelFactory
-import com.coding.urbandictionary.util.CompanionClass
 
 class MainActivity : AppCompatActivity() {
 

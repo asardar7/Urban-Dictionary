@@ -83,6 +83,7 @@ dependencies {
 
     implementation 'com.facebook.stetho:stetho:1.5.1'
 
-
-
+    // Required -- JUnit 4 framework
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'androidx.arch.core:core-testing:2.0.1'
 }

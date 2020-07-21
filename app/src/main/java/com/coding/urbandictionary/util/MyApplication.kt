@@ -1,4 +1,4 @@
-package com.coding.urbandictionary
+package com.coding.urbandictionary.util
 
 import android.app.Application
 import com.facebook.stetho.Stetho

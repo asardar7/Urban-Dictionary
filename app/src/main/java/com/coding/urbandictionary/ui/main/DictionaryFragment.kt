@@ -1,20 +1,11 @@
 package com.coding.urbandictionary.ui.main
 
-import android.annotation.SuppressLint
-import android.app.SearchManager
-import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.view.Menu
-import android.view.MenuInflater
 import androidx.fragment.app.Fragment
 import android.view.View
-import androidx.appcompat.widget.SearchView
-import androidx.core.content.ContextCompat.getSystemService
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.coding.urbandictionary.MainActivity
 import com.coding.urbandictionary.R
 import com.coding.urbandictionary.adapters.DictionaryAdapter
 import com.coding.urbandictionary.util.CompanionClass
@@ -30,12 +21,12 @@ class DictionaryFragment : Fragment(R.layout.main_fragment) {
     lateinit var viewModel: DictionaryViewModel
     lateinit var dictionaryAdapter: DictionaryAdapter
 
-    val TAG = "DictionaryFragment"
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = (activity as MainActivity).viewModel
         initRecyclerView()
+
+        viewModel.progressBar = progressBar
 
         viewModel.word.observe(viewLifecycleOwner, Observer { response ->
             when (response) {
@@ -48,7 +39,7 @@ class DictionaryFragment : Fragment(R.layout.main_fragment) {
                 is Resource.Error -> {
                     hideProgressBar()
                     response.message?.let { message ->
-                        Log.e(TAG, "An error occured: $message")
+                        Log.e(CompanionClass.TAG, "An error occured: $message")
                     }
                 }
 
@@ -84,9 +75,11 @@ class DictionaryFragment : Fragment(R.layout.main_fragment) {
     }
 
     private fun hideProgressBar() {
+        viewModel.progressBar.visibility = View.GONE
     }
 
     private fun showProgressBar() {
+        viewModel.progressBar.visibility = View.VISIBLE
     }
 
     private fun initRecyclerView() {

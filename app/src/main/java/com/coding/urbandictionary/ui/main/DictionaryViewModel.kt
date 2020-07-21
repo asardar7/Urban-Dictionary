@@ -1,5 +1,6 @@
 package com.coding.urbandictionary.ui.main
 
+import android.widget.ProgressBar
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -19,9 +20,11 @@ class DictionaryViewModel(
     val word: MutableLiveData<Resource<DictionaryList>> = MutableLiveData()
     val list: MutableLiveData<List<Word>> = MutableLiveData()
 
+    lateinit var progressBar: ProgressBar
+
     init {
         deleteAllWords()
-        getWord("work")
+        getWord("nike")
     }
 
     fun getWord(searchWord: String) = viewModelScope.launch {
